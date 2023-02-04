@@ -1,0 +1,94 @@
+.Friendschat{
+    width: 100%;
+}
+.Friendschat_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.chat_container{
+    width: 100%;
+    border-bottom: 1px solid rgba(190, 189, 189, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.Friendschat_info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-self: center;
+}
+.chat_message{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.search{
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+.searchs{
+    font-size: 2.5rem !important;
+    position: absolute !important;
+    left: 8rem !important;
+    top: 3.3rem !important;
+    color: #8f909b !important;
+}
+.search_input{
+    width: 85%;
+    background-color: #f8f8f6;
+    height: 6rem;
+    padding-left: 8rem;
+    font-size: 2rem;
+    color: #8f909b;
+    border-radius: 20px;
+}
+.chat_container{
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Friendschat_image{
+    display: flex;
+    align-self: center;
+    gap: 3rem;
+}
+.profile_image{
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.Friendschat_info > h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+.chat_message > p{
+    font-size: 1.8rem;
+    color: #8f909b !important;
+
+}
+.view{
+    font-size: 2.5rem !important;
+    color: #8f909b !important;
+}
+.viewed{
+    font-size: 2.5rem !important;
+    color: #1e91c2 !important;
+}
+.Friendschat_timestamp{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-self: center;
+    color: #8f909b !important;
+}
+.Friendschat_timestamp>p{
+    font-size: 1.8rem;
+    color: #8f909b !important;
+}

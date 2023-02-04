@@ -1,0 +1,23 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+input{
+  outline: none;
+  border: none;
+}
+button{
+  outline: none;
+  border: none;
+}
+#root{
+  --mobile-fontsize: 0.95rem,
+  --mobile-header-h1: 1.3rem,
+  --mobile-header-h2: 1.1rem,
+  --background: #efeae2,
+  --color: #111b21,
+  --header-color: #111b21,
+  --padding: 1rem 1rem
+  
+}
