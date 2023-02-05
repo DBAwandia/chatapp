@@ -7,7 +7,7 @@ function Friendschat() {
     {
       image:"https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
       name: "Mike",
-      message: "Ndio kutokea",
+      message: "Hi ,how are you",
       date: "Thursday",
       time: "Thur, 12:03pm"
     },
@@ -21,28 +21,28 @@ function Friendschat() {
     {
       image:"https://images.unsplash.com/photo-1576828831022-ca41d3905fb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvb2wlMjBwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
       name: "Sarah",
-      message: "Ndio kutokea",
+      message: "Hi ,how are you doing",
       date: "Thursday",
       time: "Thur, 12:03pm"
     },
     {
       image:"https://images.unsplash.com/photo-1592854899481-f78db4baccb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-      name: "Mike",
-      message: "Ndio kutokea",
+      name: "Wadda",
+      message: "Hi ,how are you",
       date: "Thursday",
       time: "Thur, 12:03pm"
     },
     {
       image:"https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-      name: "Mike",
-      message: "Ndio kutokea",
+      name: "Wandia",
+      message: "Hi ,how are you",
       date: "Thursday",
       time: "Thur, 12:03pm"
     },
     {
       image:"https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-      name: "Mike",
-      message: "Ndio kutokea",
+      name: "Xcrx",
+      message: "Hi ,how are you",
       date: "Thursday",
       time: "Thur, 12:03pm"
     }
@@ -53,7 +53,6 @@ function Friendschat() {
   return (
     <div className='Friendschat'>
       <div className='Friendschat_container'>
-
         <div className='search'>
           <Search className='searchs'/>
           <input type='search' className='search_input' placeholder='Search or start new chat' />

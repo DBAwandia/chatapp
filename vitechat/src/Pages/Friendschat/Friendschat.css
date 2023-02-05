@@ -1,10 +1,14 @@
 .Friendschat{
-    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 2rem;
 }
 .Friendschat_container{
     width: 100%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+
 }
 .chat_container{
     width: 100%;
@@ -27,13 +31,13 @@
 .search{
     width: 100%;
     text-align: center;
-    padding-top: 2rem;
+    margin-bottom: 5rem;
 }
 .searchs{
-    font-size: 2.5rem !important;
+    font-size: 2.8rem !important;
     position: absolute !important;
     left: 8rem !important;
-    top: 3.3rem !important;
+    top: 1.5rem !important;
     color: #8f909b !important;
 }
 .search_input{
@@ -66,7 +70,9 @@
 }
 .Friendschat_info > h1{
     font-size: 2.5rem;
-    font-weight: 300;
+    font-weight: 400;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+    
 }
 .chat_message > p{
     font-size: 1.8rem;

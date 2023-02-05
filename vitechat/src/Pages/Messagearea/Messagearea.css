@@ -1,0 +1,63 @@
+.Messagearea{
+    width: 100%;
+}
+.Messagearea_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Messagearea_nav{
+    width: 65%;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 10rem;
+    padding-left: 2rem;
+    background-color: #f0f2f5;
+}
+.profile_images{
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.Messagearea_names{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.Messagearea_names > h1{
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+.Messagearea_names > p{
+    font-size: 1.8rem;
+    color: #8f909b !important;
+}
+
+.receiver_message_chat_layout{
+    width: 50%;
+    color: #111b21;
+    font-size: 1.8rem;
+    border-radius: 30px;
+    margin: 2rem 3rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    letter-spacing: normal;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+}
+.sender_message_chat_layout{
+    width: 50%;
+    color: #111b21;
+    font-size: 1.8rem;
+    margin-left: 28em;
+    border-radius: 30px;
+    margin-top: 2rem;
+    background-color: #d9fdd3;
+    padding: 1rem;
+    letter-spacing: normal;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
+}
