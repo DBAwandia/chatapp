@@ -1,6 +1,7 @@
 .Friendschat{
     position: fixed;
     left: 0;
+    min-height: 100vh;
     top: 2rem;
 }
 .Friendschat_container{

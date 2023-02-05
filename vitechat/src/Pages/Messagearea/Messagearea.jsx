@@ -3,7 +3,38 @@ import "./Messagearea.css"
 
 function Messagearea() {
  let image="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-
+ let data1 =[
+  {
+    description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+  },
+//   {
+//     description: "final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+//   },
+//     {
+//     description: "placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+//   },
+//     {
+//     description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+//   },
+//   {
+//   description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+// }
+ ]
+ let data2 =[
+ 
+    {
+    description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+  },
+//   {
+//   description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+// },
+// {
+//   description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+// },
+// {
+// description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+// }
+ ]
   return (
     <div className='Messagearea'>
       <div className='Messagearea_container'>
@@ -16,79 +47,22 @@ function Messagearea() {
           </div>
         </div>
 
-    <div className='receiver_message_chat_layout'>
-      <p>In publishing and graphic design, 
-        Lorem ipsum is a placeholder text 
-        commonly used to demonstrate the visual 
+    <div className='margintop'>
+          {data1?.map((item) =>(
+          <div className='receiver_message_chat_layout'>
+              <p>
+                {item?.description}
+                
+              </p>
+            </div>)) }
+
+          {data2?.map((items) =>( <div className='sender_message_chat_layout'>
+              <p>
+              {items?.description}
         
-      </p>
-    </div>
-
-    <div className='sender_message_chat_layout'>
-      <p>In publishing and graphic design, 
-        Lorem ipsum is a placeholder text 
-        commonly used to demonstrate the visual 
-        form of a document or a typeface without 
-        relying on meaningful content. Lorem ipsum
-         may be used as a placeholder before final 
-         copy is available.
-      </p>
-    </div>
-
-    <div className='receiver_message_chat_layout'>
-      <p>In publishing and graphic design, 
-        Lorem ipsum is a placeholder text 
-        commonly used to demonstrate the visual 
-        form of a document or a typeface without 
-        relying on meaningful content. Lorem ipsum
-         may be used as a placeholder before final 
-         copy is available.
-      </p>
-    </div>
-
-    <div className='sender_message_chat_layout'>
-      <p>In publishing and graphic design, 
-        Lorem ipsum is a placeholder text 
-        commonly used to demonstrate the visual 
-        form of a document or a typeface without 
-        relying on meaningful content. Lorem ipsum
-         may be used as a placeholder before final 
-         copy is available.
-      </p>
-    </div>
-    <div className='receiver_message_chat_layout'>
-      <p>
-        relying on meaningful content. Lorem ipsum
-         may be used as a placeholder before final 
-         copy is available.
-      </p>
-    </div>
-    <div className='receiver_message_chat_layout'>
-      <p>In publishing and graphic design, 
-        Lorem ipsum is a placeholder text 
-      </p>
-    </div>
-
-    <div className='sender_message_chat_layout'>
-      <p>In publishing and graphic design, 
-        Lorem ipsum is a placeholder text 
-        commonly used to demonstrate the visual 
-        form of a document or a typeface without 
-        relying on meaningful content. Lorem ipsum
-         may be used as a placeholder before final 
-         copy is available.
-      </p>
-    </div> <div className='sender_message_chat_layout'>
-      <p>In publishing and graphic design, 
-        Lorem ipsum is a placeholder text 
-        commonly used to demonstrate the visual 
-        form of a document or a typeface without 
-        relying on meaningful content. Lorem ipsum
-         may be used as a placeholder before final 
-         copy is available.
-      </p>
-    </div>
-
+              </p>
+            </div>))}
+        </div>
       </div>
     </div>
   )

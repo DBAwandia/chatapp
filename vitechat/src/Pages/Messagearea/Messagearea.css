@@ -1,5 +1,6 @@
 .Messagearea{
     width: 100%;
+    min-height: 100vh;
 }
 .Messagearea_container{
     width: 100%;
@@ -12,12 +13,18 @@
     align-items: center !important;
     gap: 4rem;
     position: fixed;
+    z-index: 9999999999999999999999999;
     top: 0;
     right: 0;
     height: 10rem;
     padding-left: 2rem;
     background-color: #f0f2f5;
 }
+.margintop{
+    margin-top: 10rem !important;
+    margin-bottom: 5rem;
+}
+
 .profile_images{
     width: 110px;
     height: 110px;
@@ -39,18 +46,27 @@
 }
 
 .receiver_message_chat_layout{
-    width: 50%;
+    width: 50% !important;
     color: #111b21;
     font-size: 1.8rem;
     border-radius: 30px;
+    align-items: center;
     margin: 2rem 3rem;
     background-color: #ffffff;
     padding: 1rem;
     letter-spacing: normal;
     font-family: "Segoe UI", "Helvetica Neue", Helvetica, "Lucida Grande", Arial, Ubuntu, Cantarell, "Fira Sans", sans-serif;
 }
+.message_img{
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
 .sender_message_chat_layout{
     width: 50%;
+    align-items: center;
     color: #111b21;
     font-size: 1.8rem;
     margin-left: 28em;
