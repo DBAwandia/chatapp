@@ -9,9 +9,43 @@
 }
 .Friendchats_home{
     width: 35%;
-    
+    min-height: 100vh;
 }
 .Messaging_home{
     width: 65%;
+    min-height: 100vh;
     background-color: #efeae2;
+}
+@media screen and (max-width: 642px) {
+    .Home{
+        width: 100%;
+        padding: 0px;
+    }
+    .Friendchats_home{
+        min-width: 100% !important;
+
+    }
+    .Messaging_home{
+        max-width: 100% !important;
+        background-color: blue !important;
+        /* padding: 0; */
+        /* margin-left: -20rem; */
+    }
+   
+}
+@media screen and (min-width: 642px) and (max-width: 1009px) {
+    .Home{
+        width: 100%;
+        padding: 30px;
+    }
+    .Friendchats_home{
+        min-width: 100% !important;
+
+    }
+    .Messaging_home{
+        min-width: 100%;
+    }
+    .sender_message_chat_layout{
+        margin-left: -29em !important;
+    }
 }

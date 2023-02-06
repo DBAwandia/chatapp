@@ -1,8 +1,12 @@
 .Friendschat{
     position: fixed;
     left: 0;
-    min-height: 100vh;
+    overflow-y: scroll;
+    max-height: 100vh;
     top: 2rem;
+}
+::-webkit-scrollbar {
+    display: none;
 }
 .Friendschat_container{
     width: 100%;
@@ -33,6 +37,9 @@
     width: 100%;
     text-align: center;
     margin-bottom: 5rem;
+    position: sticky;
+    top: 0px;
+    z-index: 9999999999999999999999999999999999999999999;
 }
 .searchs{
     font-size: 2.8rem !important;
@@ -98,4 +105,265 @@
 .Friendschat_timestamp>p{
     font-size: 1.8rem;
     color: #8f909b !important;
+}
+@media screen and (max-width: 642px) {
+    .Friendschat{
+        width: 100%;
+        position: relative;
+        left: 0;
+        overflow-y: scroll;
+        max-height: 100vh;
+        top: 1rem;
+    }
+    .Friendschat_container{
+        width: 100%;
+    }
+    .chat_container{
+        width: 100%;
+        border-bottom: 1px solid rgba(190, 189, 189, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .Friendschat_info{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        align-self: center;
+    }
+    .chat_message{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .search{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .searchs{
+        font-size: 1.5rem !important;
+        position: absolute !important;
+        left: 4rem !important;
+        top: 0.9rem !important;
+        color: #8f909b !important;
+    }
+    .search_input{
+        width: 92%;
+        height: 3rem;
+        padding-left: 5rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    .chat_container{
+        width: 100%;
+        padding: 1rem;
+    
+    }
+    .Friendschat_image{
+        display: flex;
+        align-self: center;
+        gap: 1rem;
+    }
+    .profile_image{
+        width: 60px;
+        height: 60px;
+    }
+    .Friendschat_info > h1{
+        font-size: 1.1rem;
+    }
+    .chat_message > p{
+        font-size: 0.95rem;
+    
+    }
+    .view{
+        font-size: 0.88rem !important;
+    }
+    .viewed{
+        font-size: 0.88rem !important;
+    }
+    .Friendschat_timestamp{
+        gap: 0.3;
+    }
+    .Friendschat_timestamp>h2{
+        font-size: 1rem;
+        font-family: "poppins", sans-serif;
+    }
+    .Friendschat_timestamp>p{
+        font-size: 0.95rem;
+    }
+}
+@media screen and (min-width: 642px) and (max-width: 1009px) {
+    .Friendschat{
+        width: 100%;
+        position: relative;
+        left: 0;
+        overflow-y: scroll;
+        max-height: 100vh;
+        top: 1rem;
+    }
+    .Friendschat_container{
+        width: 100%;
+    }
+    .chat_container{
+        width: 100%;
+        border-bottom: 1px solid rgba(190, 189, 189, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .Friendschat_info{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        align-self: center;
+    }
+    .chat_message{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .search{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .searchs{
+        font-size: 1.5rem !important;
+        position: absolute !important;
+        left: 6.2rem !important;
+        top: 1rem !important;
+        color: #8f909b !important;
+    }
+    .search_input{
+        width: 92%;
+        height: 3.5rem;
+        padding-left: 8rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    .chat_container{
+        width: 100%;
+        padding: 1rem;
+
+    }
+    .Friendschat_image{
+        display: flex;
+        align-self: center;
+        gap: 3rem;
+    }
+    .profile_image{
+        width: 60px;
+        height: 60px;
+    }
+    .Friendschat_info > h1{
+        font-size: 1.1rem;
+    }
+    .chat_message > p{
+        font-size: 0.95rem;
+    
+    }
+    .view{
+        font-size: 0.88rem !important;
+    }
+    .viewed{
+        font-size: 0.88rem !important;
+    }
+    .Friendschat_timestamp{
+        gap: 0.3;
+    }
+    .Friendschat_timestamp>h2{
+        font-size: 1rem;
+        font-family: "poppins", sans-serif;
+    }
+    .Friendschat_timestamp>p{
+        font-size: 0.95rem;
+    }
+}
+@media screen and (min-width: 1010px)  {
+    .Friendschat{
+        width: 100%;
+        position: relative;
+        left: 0;
+        overflow-y: scroll;
+        max-height: 100vh;
+        top: 1rem;
+    }
+    .Friendschat_container{
+        width: 100%;
+    }
+    .chat_container{
+        width: 100%;
+        border-bottom: 1px solid rgba(190, 189, 189, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .Friendschat_info{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        align-self: center;
+    }
+    .chat_message{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .search{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .searchs{
+        font-size: 1.5rem !important;
+        position: absolute !important;
+        left: 4rem !important;
+        top: 0.9rem !important;
+        color: #8f909b !important;
+    }
+    .search_input{
+        width: 92%;
+        height: 3rem;
+        padding-left: 5rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    .chat_container{
+        width: 100%;
+        padding: 1rem;
+    
+    }
+    .Friendschat_image{
+        display: flex;
+        align-self: center;
+        gap: 1rem;
+    }
+    .profile_image{
+        width: 60px;
+        height: 60px;
+    }
+    .Friendschat_info > h1{
+        font-size: 1.1rem;
+    }
+    .chat_message > p{
+        font-size: 0.95rem;
+    
+    }
+    .view{
+        font-size: 0.88rem !important;
+    }
+    .viewed{
+        font-size: 0.88rem !important;
+    }
+    .Friendschat_timestamp{
+        gap: 0.3;
+    }
+    .Friendschat_timestamp>h2{
+        font-size: 1rem;
+        font-family: "poppins", sans-serif;
+    }
+    .Friendschat_timestamp>p{
+        font-size: 0.95rem;
+    }
 }

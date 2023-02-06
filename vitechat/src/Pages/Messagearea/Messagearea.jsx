@@ -7,33 +7,33 @@ function Messagearea() {
   {
     description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
   },
-//   {
-//     description: "final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-//   },
-//     {
-//     description: "placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-//   },
-//     {
-//     description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-//   },
-//   {
-//   description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-// }
+  {
+    description: "final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+  },
+    {
+    description: "placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+  },
+    {
+    description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+  },
+  {
+  description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+}
  ]
  let data2 =[
  
     {
     description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
   },
-//   {
-//   description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-// },
-// {
-//   description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-// },
-// {
-// description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-// }
+  {
+  description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+},
+{
+  description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+},
+{
+description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
+}
  ]
   return (
     <div className='Messagearea'>
@@ -47,23 +47,24 @@ function Messagearea() {
           </div>
         </div>
 
-    <div className='margintop'>
-          {data1?.map((item) =>(
-          <div className='receiver_message_chat_layout'>
+    {/* <div className='margintop'>
+          {data1?.map((item,i) =>(
+          <div className='receiver_message_chat_layout' key={i}>
               <p>
                 {item?.description}
                 
               </p>
             </div>)) }
 
-          {data2?.map((items) =>( <div className='sender_message_chat_layout'>
+          {data2?.map((items,i) =>( 
+          <div className='sender_message_chat_layout' key={i}>
               <p>
               {items?.description}
         
               </p>
             </div>))}
-        </div>
-      </div>
+        </div>*/}
+      </div> 
     </div>
   )
 }
