@@ -26,10 +26,7 @@
 
     }
     .Messaging_home{
-        max-width: 100% !important;
-        background-color: blue !important;
-        /* padding: 0; */
-        /* margin-left: -20rem; */
+        display: none;
     }
    
 }
@@ -43,9 +40,13 @@
 
     }
     .Messaging_home{
-        min-width: 100%;
+        display: none;
+        padding: 0;
     }
-    .sender_message_chat_layout{
-        margin-left: -29em !important;
-    }
+   
 }
+/* @media screen and (min-width: 1010px)  {
+    .Friendchats_home{
+        position: fixed;
+    }
+} */

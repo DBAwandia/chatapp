@@ -47,7 +47,7 @@ description: "may be used as a placeholder before final may be used as a placeho
           </div>
         </div>
 
-    {/* <div className='margintop'>
+    <div className='margintop'>
           {data1?.map((item,i) =>(
           <div className='receiver_message_chat_layout' key={i}>
               <p>
@@ -63,7 +63,7 @@ description: "may be used as a placeholder before final may be used as a placeho
         
               </p>
             </div>))}
-        </div>*/}
+        </div>
       </div> 
     </div>
   )
