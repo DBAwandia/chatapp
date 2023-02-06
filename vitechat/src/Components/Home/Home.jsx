@@ -11,7 +11,7 @@ function Home() {
             <Friendschat />
         </div>
         <div className='Messaging_home'>
-            <Messagearea />
+            <h1>MESSANGER</h1>
         </div>
       </div>
     </div>

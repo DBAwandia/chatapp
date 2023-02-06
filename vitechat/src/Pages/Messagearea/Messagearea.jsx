@@ -1,7 +1,10 @@
+import { Close } from '@mui/icons-material'
 import React from 'react'
 import "./Messagearea.css"
+import { useNavigate } from "react-router-dom"
 
 function Messagearea() {
+  const navigate = useNavigate()
  let image="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
  let data1 =[
   {
@@ -45,6 +48,10 @@ description: "may be used as a placeholder before final may be used as a placeho
             <h1>Mike</h1>
             <p>last seen 11:03pm</p>
           </div>
+      <Close className='close' onClick={()=>{
+        navigate("/")
+      }}/>
+
         </div>
 
     <div className='margintop'>

@@ -1,6 +1,16 @@
 .Messagearea{
     width: 100%;
     min-height: 100vh;
+    position: relative;
+}
+.close{
+    position: absolute !important;
+    top: 1.3rem !important;
+    right: 5rem !important;
+    font-size: 3rem !important;
+    cursor: pointer !important;
+    z-index: 99999999999999999999999999999999999999999999999999999 !important;
+    color: red !important;
 }
 .Messagearea_container{
     width: 100%;
@@ -84,6 +94,11 @@
         min-height: 100vh;
         background-color: #efeae2;
     }
+    .close{
+        top: 2rem !important;
+        right: 1.5rem !important;
+        font-size: 1.6rem !important;
+    }
     .Messagearea_container{
         width: 100%;
         display: flex;
@@ -93,7 +108,7 @@
         width: 100%;
         display: flex !important;
         align-items: center !important;
-        gap: 4rem;
+        gap: 2rem;
         position: fixed;
         z-index: 9999999999999999999999999;
         top: 0;
@@ -166,6 +181,11 @@
         width: 100%;
         min-height: 100vh;
         background-color: #efeae2;
+    }
+    .close{
+        top: 2rem !important;
+        right: 3rem !important;
+        font-size: 1.6rem !important;
     }
     .Messagearea_container{
         width: 100%;
@@ -249,6 +269,11 @@
         width: 100%;
         min-height: 100vh;
         background-color: #efeae2;
+    }
+    .close{
+        top: 2rem !important;
+        right: 3rem !important;
+        font-size: 1.6rem !important;
     }
     .Messagearea_container{
         width: 100%;

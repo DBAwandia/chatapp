@@ -14,7 +14,9 @@
 .Messaging_home{
     width: 65%;
     min-height: 100vh;
+    overflow: hidden;
     background-color: #efeae2;
+    text-align: center;
 }
 @media screen and (max-width: 642px) {
     .Home{

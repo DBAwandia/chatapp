@@ -1,8 +1,10 @@
 import React from 'react'
 import "./Friendschat.css"
 import { DoneAll, Search } from "@mui/icons-material"
+import { useNavigate } from "react-router-dom"
 
 function Friendschat() {
+  const navigate = useNavigate()
   const data = [
     {
       id: 1,
@@ -193,7 +195,9 @@ function Friendschat() {
         </div>
 
        { data?.map((item) =>{
-       return <div className='chat_container' key={item?.id}>
+       return <div className='chat_container' key={item?.id} onClick={()=>{
+        navigate("/message")
+       }}>
           <div className='Friendschat_image'>
             <img src={item?.image} alt="image" className='profile_image' />
             
