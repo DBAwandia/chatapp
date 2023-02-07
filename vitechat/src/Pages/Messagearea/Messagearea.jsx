@@ -2,6 +2,7 @@ import { Close } from '@mui/icons-material'
 import React from 'react'
 import "./Messagearea.css"
 import { useNavigate } from "react-router-dom"
+import Footer from '../../Components/Footer/Footer'
 
 function Messagearea() {
   const navigate = useNavigate()
@@ -40,6 +41,10 @@ description: "may be used as a placeholder before final may be used as a placeho
  ]
   return (
     <div className='Messagearea'>
+      <div className='footer_contain'>
+        <Footer/>
+      </div>
+      
       <div className='Messagearea_container'>
 
         <div className='Messagearea_nav'>

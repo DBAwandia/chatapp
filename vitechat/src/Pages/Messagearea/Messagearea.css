@@ -3,6 +3,13 @@
     min-height: 100vh;
     position: relative;
 }
+.footer_contain{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999999999;
+    position: fixed;
+}
 .close{
     position: absolute !important;
     top: 1.3rem !important;
@@ -10,7 +17,7 @@
     font-size: 3rem !important;
     cursor: pointer !important;
     z-index: 99999999999999999999999999999999999999999999999999999 !important;
-    color: red !important;
+    color: rgba(211, 205, 205,0.7) !important;
 }
 .Messagearea_container{
     width: 100%;
