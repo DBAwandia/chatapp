@@ -15,9 +15,10 @@ router.post("/" , async ( req, res ) =>{
 })
 
 //get conversations with userid in
-router.get("/:id" , async ( req, res ) =>{
+router.get("/getusers" , async ( req, res ) =>{
+    const userId = req.query.userId
     try{
-        const getUser = await Users.findById(req.params.id)
+        const getUser = await Users.findById(userId)
         res.status(200).json(getUser)
     }catch(err){
         res.status(500).json(err)

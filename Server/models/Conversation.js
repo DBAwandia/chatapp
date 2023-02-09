@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const conversationSchema = new mongoose.Schema({
     members:{
-        type: []
+        type: Array
     }
 }, {timestamps: true})
 

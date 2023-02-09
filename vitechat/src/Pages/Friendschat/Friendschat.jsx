@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./Friendschat.css"
-import { DoneAll, Search } from "@mui/icons-material"
+import { DoneAll, RestorePageOutlined, Search } from "@mui/icons-material"
 import { useNavigate } from "react-router-dom"
 import { axiosInstance } from "../../baseUrl/BaseUrl"
+import moment from 'moment';
 
 function Friendschat() {
   const navigate = useNavigate()
@@ -14,38 +15,38 @@ function Friendschat() {
 
 
   //fetch conversation in which logged in account is
+  useEffect(() => {
+    const getConversations = async () => {
+      try {
+        const res = await axiosInstance.get("/Conversation/" + userId);
+        setConversation(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getConversations();
+  }, [userId]);
+
+  // //fetch friendsData
   useEffect(()=>{
-    const fetchConversation = async () =>{
-      try{
-        const res = await axiosInstance.get(`/Conversation/${userId}`)
-        setConversation(res.data)
-      }catch(err){}
-    }
-    fetchConversation()
 
-  },[userId])
-
-  //convert array to object
-  // const convertToObject = Object.assign({}, conversation)
-  console.log(conversation)
-  
-  //fetch friendsData
-  useEffect(()=>{
-    const friendId = conversation.member.find(m=>m !== userId)
-    // console.log(friendId)
-
+    //filter my id only get friends ID
     const fetchFriendData = async () =>{
+      let friendID = conversation.map(item => item.members.find(m=>m !== userId))
+
+      //loop
+      for(let id of friendID){
       try{
-        const resp = await axiosInstance.get(`/Users/${friendId}`)
-        console.log(resp)
-        setFriendData(resp.data)
+        const resp = await axiosInstance.get(`/Users/getusers?userId=${id}`)
+        setFriendData([resp.data])
       }catch(err){}
     }
+   }
     fetchFriendData()
 
-  },[])
+  },[conversation])
 
-
+let names = friendData.map((item)=>item?.name ).reverse()
   
   const data = [
     {
@@ -230,40 +231,43 @@ function Friendschat() {
   // console.log(descLength,desc)
   return (
     <div className='Friendschat'>
-      <div className='Friendschat_container'>
-        <div className='search'>
-          <Search className='searchs'/>
-          <input type='search' className='search_input' placeholder='Search or start new chat' />
+    <div className='Friendschat_container'>
+      <div className='search'>
+        <Search className='searchs'/>
+        <input type='search' className='search_input' placeholder='Search or start new chat' />
+      </div>
+
+     { conversation?.map((item) =>{
+     return <div className='chat_container' key={item?.id} onClick={()=>{
+      navigate("/message")
+     }}>
+        <div className='Friendschat_image'>
+          <img src={item?.image? item?.image: emptyPhoto} alt="image" className='profile_image' />
+          
+        <div className='Friendschat_info'>
+          <h1>{names}</h1>
+          <div className='chat_message'>
+            <DoneAll />
+            {/* <p>{item?.message.length > 6 ? item?.message.slice(0 , 17) + "..." : item?.message}</p> */}
+          </div>
         </div>
-
-       { conversation?.map((item) =>{
-       return <div className='chat_container' key={item?.id} onClick={()=>{
-        navigate("/message")
-       }}>
-          <div className='Friendschat_image'>
-            <img src={item?.image? item?.image: emptyPhoto} alt="image" className='profile_image' />
-            
-          <div className='Friendschat_info'>
-            <h1>{item?.name}</h1>
-            <div className='chat_message'>
-              <DoneAll className={item.name === "Ken" ?"view" : "viewed"}/>
-              {/* <p>{item?.message.length > 6 ? item?.message.slice(0 , 17) + "..." : item?.message}</p> */}
-            </div>
-          </div>
-
-
-          </div>
-
-          <div className='Friendschat_timestamp'>
-            <h2>{item?.date}</h2>
-            <p>{item?.time}</p>
-          </div>
-            
-          </div>})}
 
         </div>
 
-    </div>
+        <div className='Friendschat_timestamp'>
+            <h2>
+              {moment(item?.createdAt).format("dddd")}
+            </h2>
+            <p>
+              {moment(item?.createdAt).format('L')}
+            </p>
+        </div>
+          
+        </div>})}
+
+      </div>
+
+  </div>
   )
 }
 
