@@ -1,11 +1,12 @@
 import React from 'react'
 import Friendschat from '../../Pages/Friendschat/Friendschat'
-import Messagearea from '../../Pages/Messagearea/Messagearea'
 import "./Home.css"
+// import Messagearea from '../../Pages/Messagearea/Messagearea'
 
 function Home() {
   return (
     <div className='Home'>
+
       <div className='Home_container'>
       <div className='Friendchats_home'>
             <Friendschat />
@@ -14,6 +15,7 @@ function Home() {
             <h1>MESSANGER</h1>
         </div>
       </div>
+
     </div>
   )
 }

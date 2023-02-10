@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Footer.css"
+
 function Footer() {
+  const [ newMessage, setNewMessage ] = useState("")
+  const handleClick = (e) =>{
+
+  }
   return (
     <div className='footer'>
       <div className='footer_input'>
-        <input className='input_footer' type="text" placeholder='Start message' />
-        <button className='button_send'>Send</button>
+        <input onChange={(e)=> setNewMessage(e.target.value)} className='input_footer' type="text" placeholder='Start message' />
+        <button className='button_send' onClick={()=>handleClick}>Send</button>
       </div>
     </div>
   )
