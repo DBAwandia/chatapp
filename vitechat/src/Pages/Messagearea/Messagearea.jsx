@@ -9,38 +9,6 @@ import { io } from "socket.io-client";
 function Messagearea() {
   const navigate = useNavigate()
  let image="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
- let data1 =[
-  {
-    description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-  },
-  {
-    description: "final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-  },
-    {
-    description: "placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-  },
-    {
-    description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-  },
-  {
-  description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-}
- ]
- let data2 =[
- 
-    {
-    description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-  },
-  {
-  description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-},
-{
-  description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-},
-{
-description: "may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final may be used as a placeholder before final "
-}
- ]
  const userId = "63e3aeac84e26cedb39862c4"
   const [ conversation , setConversation ] = useState([])
   const [ friendData, setFriendData ] = useState([])
@@ -50,15 +18,17 @@ description: "may be used as a placeholder before final may be used as a placeho
   useEffect(()=>{
     setSockets(io("ws://localhost:8900"))
   }, [])
-// console.log(sockets)
+
   useEffect(()=>{
-    sockets?.on("welcome", message=>{
+    // send userId to server userID
+    sockets?.emit("addUser",userId )
 
-      console.log(message)
-    })
-  }, [sockets])
+    //take socketId and userId from server
+    sockets?.on("getUsers",(users)=>{
+      console.log(users)
+    } )
 
-
+  }, [userId])
 
 
   //fetch conversation in which logged in account is
@@ -91,7 +61,7 @@ for(let id of ids){
     getMessage();
   }
   }, []);
-  console.log(message)
+  
   let ownMessage = message.map(item => item.sender === userId)
   // //fetch friendsData
   useEffect(()=>{
