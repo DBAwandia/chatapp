@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 import Footer from '../../Components/Footer/Footer'
 import { axiosInstance } from '../../baseUrl/BaseUrl'
 import { io } from "socket.io-client";
-
+import Footer from "../../Components/Footer/Footer"
 function Messagearea() {
   const navigate = useNavigate()
  let image="https://images.unsplash.com/photo-1535207010348-71e47296838a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29vbCUyMHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
@@ -14,6 +14,10 @@ function Messagearea() {
   const [ friendData, setFriendData ] = useState([])
   const [ message, setMessage ] = useState([])
   const [ sockets, setSockets ] = useState(null)
+  const [ newMessage, setNewMessage] = useState("")
+  const [ arrivalMessage, setArrivalMessage] = useState(null)
+
+  
 
   useEffect(()=>{
     setSockets(io("ws://localhost:8900"))
@@ -82,6 +86,36 @@ for(let id of ids){
 
   },[conversation])
 
+  //lets get receiverID
+  const receiverID = conversation.map((item) => item?.members.find(member => member !== userId)) 
+
+  //hendleSubmit
+  const handleSubmit = ()=>{
+    sockets?.emit("sendMessage" , {
+      senderId: userId,
+      receiverID,
+      text: newMessage
+    })
+  }
+
+  //update message using sockets
+  useEffect(()=>{
+    sockets.on("getMessage" , data =>{
+      setArrivalMessage({
+        //destructure data because their names are different from mongodb
+        senderId: data.senderId,
+        text: data.text,
+        createdAt: Date.now()
+      })
+    })
+  },[])
+
+   //update message using sockets
+   useEffect(()=>{
+    arrivalMessage && conversation.map((item) => item.members.includes(arrivalMessage.senderId)) &&
+    setMessage( (prev) => [...prev, arrivalMessage])
+  },[arrivalMessage , conversation])
+
 let names = friendData.map((item)=>item?.name ).reverse()
   return (
     <div className='Messagearea'>
@@ -119,6 +153,7 @@ let names = friendData.map((item)=>item?.name ).reverse()
             </div>))}
         </div>
       </div> 
+      <Footer newMessage={newMessage} handleSubmit={handleSubmit}/>
     </div>
   )
 }

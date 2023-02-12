@@ -19,6 +19,12 @@ const removeUser = (socketId) =>{
     users = users.filter(user => user.socketId !== socketId)
 }
 
+//get specific user
+const getUser = (userID) =>{
+    return users.find(user => user.userID === userID)
+}
+
+
 io.on("connection", (socket) => {
     //get userID from client
     console.log("Connected")
@@ -27,11 +33,23 @@ io.on("connection", (socket) => {
         // send socketId and userID to client
         io.emit("getUsers" , users)
     })
+
+    //dieconnect
     socket.on("disconnect" , ()=>{
         console.log("disconnected")
         removeUser(socket.id)
         io.emit("getUsers" , users)
     })
+
+    //send and get message
+    socket.on("sendMessage" , ({senderId, receiverID,text})=>{
+        const user = getUser(receiverID)
+        io.to(user.socketId).emit("getMessage" , {
+            senderId,
+            text
+        })
+    })
+
 
   });
 
